@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.mainpage {
+  background: linear-gradient(#ff5722, #ffc107);
+  height: 100vh;
+  font-family: arial-black;
+}
+h1 {
+  width: 32vw;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  text-transform: capitalize;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+ul li {
+  list-style-type: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 1px solid #fff;
+  background: #fff;
+}
+.square li {
+  top: 50vh;
+  left: 45vw;
+  animation: square 10s linear infinite;
+  opacity: 0;
+}
+.square li:nth-child(2) {
+  top: 80vh;
+  left: 10vw;
+  animation-delay: 2s;
+}
+.square li:nth-child(3) {
+  top: 80vh;
+  left: 85vw;
+  animation-delay: 4s;
+}
+.square li:nth-child(4) {
+  top: 10vh;
+  left: 85vw;
+  animation-delay: 6s;
+}
+.square li:nth-child(5) {
+  top: 10vh;
+  left: 10vw;
+  animation-delay: 8s;
+}
+@keyframes square {
+  0% {
+    transform: scale(0) rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4) rotateY(1000deg);
+    opacity: 0;
+  }
+}
+.circle li {
+  bottom: 0;
+  left: 15vw;
+  animation: circle 10s linear infinite;
+  opacity: 0;
+}
+.circle li:nth-child(2) {
+  left: 35vw;
+  animation-delay: 2s;
+}
+.circle li:nth-child(3) {
+  left: 55vw;
+  animation-delay: 4s;
+}
+.circle li:nth-child(4) {
+  left: 75vw;
+  animation-delay: 6s;
+}
+.circle li:nth-child(5) {
+  left: 95vw;
+  animation-delay: 8s;
+}
+@keyframes circle {
+  0% {
+    transform: rotateY(0deg) scale(0);
+    bottom: 0;
+    opacity: 1;
+    border-radius: 0px;
+  }
+  100% {
+    transform: rotateY(1000deg) scale(5);
+    bottom: 90vh;
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
